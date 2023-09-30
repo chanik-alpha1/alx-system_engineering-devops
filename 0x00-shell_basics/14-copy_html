@@ -1,0 +1,2 @@
+#!/bin/bash
+cd .. ; find "$(pwd)/current_directory" -name "*.html" -newer "$(pwd)/current_directory" -exec cp -u {}
