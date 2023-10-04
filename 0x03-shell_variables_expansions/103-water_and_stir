@@ -1,0 +1,6 @@
+#!/bin/bash
+WATER_BASE10=$(echo "ibase=water; $WATER" | bc)
+STIR_BASE10=$(echo "ibase=stir; $STIR" | bc)
+SUM_BASE10=$((WATER_BASE10 + STIR_BASE10))
+SUM_BESTCHOL=$(echo "obase=bestchol; $SUM_BASE10" | bc)
+echo "Sum of WATER and STIR in base bestchol: $SUM_BESTCHOL"
